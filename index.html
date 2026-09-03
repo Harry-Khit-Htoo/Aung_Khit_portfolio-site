@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#171a21" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)" />
+
+    <!--
+      Theme, set before first paint. Anything later than this renders one frame
+      of the wrong palette, which is the flash every themed site is judged on.
+      Deliberately inline and dependency-free so it cannot be delayed by a
+      module fetch.
+    -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('akh.portfolio.theme');
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+
+    <title>Aung Khit Htoo — Computer Science · Software · Research</title>
+    <meta
+      name="description"
+      content="Portfolio of Aung Khit Htoo — computer science student and builder working across software development, research, education and creative production."
+    />
+    <meta name="author" content="Aung Khit Htoo" />
+    <link rel="canonical" href="https://harry-khit-htoo.github.io/innovative_portfolio/" />
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Aung Khit Htoo — Computer Science · Software · Research" />
+    <meta
+      property="og:description"
+      content="Computer science student and builder working across software development, research, education and creative production."
+    />
+    <meta property="og:url" content="https://harry-khit-htoo.github.io/innovative_portfolio/" />
+    <meta property="og:image" content="https://harry-khit-htoo.github.io/innovative_portfolio/og.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aung Khit Htoo" />
+    <meta
+      name="twitter:description"
+      content="Computer science student and builder working across software, research, education and creative production."
+    />
+    <meta name="twitter:image" content="https://harry-khit-htoo.github.io/innovative_portfolio/og.svg" />
+
+    <link rel="icon" type="image/svg+xml" href="/Aung_Khit_portfolio-site/favicon.svg" />
+
+    <!-- Fonts. Preconnect first so the stylesheet request opens on a warm connection. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+
+    <!--
+      Structured data. Keep the `name`, `url` and `sameAs` values in sync with
+      src/content/profile.ts so search engines and the page agree.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aung Khit Htoo",
+        "jobTitle": "Computer Science Student",
+        "description": "Computer science student and builder working across software development, research, education and creative production.",
+        "url": "https://harry-khit-htoo.github.io/innovative_portfolio/",
+        "sameAs": ["https://github.com/Harry-Khit-Htoo"],
+        "knowsAbout": [
+          "Software Development",
+          "Web Development",
+          "Computer Science",
+          "Research",
+          "Education",
+          "Documentary Production"
+        ]
+      }
+    </script>
+    <script type="module" crossorigin src="/Aung_Khit_portfolio-site/assets/index-Cf3h8Fvq.js"></script>
+    <link rel="modulepreload" crossorigin href="/Aung_Khit_portfolio-site/assets/motion-oiqoWeyA.js">
+    <link rel="stylesheet" crossorigin href="/Aung_Khit_portfolio-site/assets/style-Bvaf4EVJ.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <div style="padding: 3rem; font-family: system-ui, sans-serif; background: #171a21; color: #f2f3f5">
+        <h1>Aung Khit Htoo</h1>
+        <p>
+          This portfolio needs JavaScript enabled. You can reach me at
+          <a href="mailto:aungkhit.pentester@gmail.com" style="color: #5eead4"
+            >aungkhit.pentester@gmail.com</a
+          >.
+        </p>
+      </div>
+    </noscript>
+  </body>
+</html>
